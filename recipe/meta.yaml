@@ -18,7 +18,7 @@ requirements:
   build:
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - {{ cdt('libudev-devel') }}  # [linux]
+    - {{ cdt('libudev') }}  # [linux]
     - cmake
     - make  # [not win]
     - ninja  # [win]
