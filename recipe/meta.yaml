@@ -14,7 +14,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<310]
+  skip: true  # [py<310 or (win and arm64)]
   run_exports:
     - {{ pin_subpackage('libsmu', max_pin='x.x') }}
 
