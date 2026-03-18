@@ -1,0 +1,13 @@
+--- a/bindings/python/setup.py.cmakein
++++ b/bindings/python/setup.py.cmakein
+@@ -60,8 +60,8 @@
+     ext_kwargs['libraries'] = []
+     ext_kwargs = pkgconfig('libusb-1.0', **ext_kwargs)
+ 
+-ext_kwargs['extra_compile_args']=[${EXTRA_COMPILE_FLAGS}]
+-ext_kwargs['extra_link_args']=[${EXTRA_LINK_FLAGS}]
++ext_kwargs['extra_compile_args']=[x for x in [${EXTRA_COMPILE_FLAGS}] if x]
++ext_kwargs['extra_link_args']=[x for x in [${EXTRA_LINK_FLAGS}] if x]
+ 
+ # cython extensions to generate/build
+ extensions = []
