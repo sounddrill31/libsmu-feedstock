@@ -22,7 +22,6 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
-    - {{ cdt('libudev-devel') }}  # [linux]
     - cmake
     - make  # [not win]
     - ninja  # [win]
@@ -33,6 +32,7 @@ requirements:
     - libboost-devel
     - _openmp_mutex  # [linux]
     - libusb >=1
+    - libudev  # [linux]
     - python
     - setuptools
     - cython
