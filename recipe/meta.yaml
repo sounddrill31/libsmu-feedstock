@@ -10,6 +10,7 @@ source:
   git_tag: v{{ version }}
   patches:
     - 0001-skip-python-build-in-cmake.patch
+    - 0002-fix-macos-win-build.patch
 
 build:
   number: 0
