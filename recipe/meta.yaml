@@ -32,6 +32,7 @@ requirements:
   host:
     - libboost-devel
     - _openmp_mutex  # [linux]
+    - llvm-openmp    # [osx]
     - libusb >=1
     - libudev  # [linux]
     - python
@@ -42,6 +43,7 @@ requirements:
     - six
   run:
     - python
+    - llvm-openmp    # [osx]
 
 test:
   commands:
