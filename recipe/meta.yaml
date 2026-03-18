@@ -8,6 +8,8 @@ package:
 source:
   git_url: https://github.com/analogdevicesinc/{{ name }}.git
   git_tag: v{{ version }}
+  patches:
+    - 0001-skip-python-build-in-cmake.patch
 
 build:
   number: 0

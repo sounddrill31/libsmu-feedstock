@@ -4,9 +4,6 @@ set -ex
 mkdir build
 cd build
 
-# Patch CMakeLists.txt to remove problematic python build/install
-$PYTHON -c "import os; content = open('../bindings/python/CMakeLists.txt').read(); content = content.replace('add_custom_target(python ALL', 'add_custom_target(python'); import re; content = re.sub(r'install\(CODE \"execute_process.*prefix=\${CMAKE_INSTALL_PREFIX}\)\)', '', content, flags=re.DOTALL); open('../bindings/python/CMakeLists.txt', 'w').write(content)"
-
 cmake ${CMAKE_ARGS} \
     -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
     -DCMAKE_CXX_STANDARD=14 \
