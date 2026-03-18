@@ -35,6 +35,8 @@ requirements:
     - setuptools
     - cython
     - pip
+    - python-build
+    - six
   run:
     - python
 
