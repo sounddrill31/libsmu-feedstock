@@ -8,7 +8,3 @@ provider:
   linux_aarch64: azure
   osx_arm64: azure
   win_arm64: azure
-extra_platforms:
-  - linux-aarch64
-  - osx-arm64
-  - win-arm64
